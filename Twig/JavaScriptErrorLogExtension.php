@@ -104,6 +104,6 @@ class JavaScriptErrorLogExtension extends \Twig_Extension
      */
     public function getName()
     {
-        return 'javascript_error_log_extension';
+        return 'ic_base_log.twig.extension.javascript_error_log_extension';
     }
 }
