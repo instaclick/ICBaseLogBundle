@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <parameters>
+        <parameter key="ic_base_log.twig.extension.javascript_error_log_class">IC\Bundle\Base\LogBundle\Twig\JavaScriptErrorLogExtension</parameter>
+        <parameter key="ic_base_log.handler.amqp_handler_class">IC\Bundle\Base\LogBundle\Handler\RabbitMqHandler</parameter>
+    </parameters>
+
+
+    <services>
+
+        <service id="ic_base_log.twig.extension.javascript_error_log"
+                 class="%ic_base_log.twig.extension.javascript_error_log_class%">
+            <call method="setLogRequest">
+                <argument>%ic_base_log.config.log_requests%</argument>
+            </call>
+            <call method="setKernelDebug">
+                <argument>%kernel.debug%</argument>
+            </call>
+            <call method="setTwig">
+                <argument type="service" id="twig" />
+            </call>
+            <tag name="twig.extension" />
+        </service>
+    </services>
+
+</container>

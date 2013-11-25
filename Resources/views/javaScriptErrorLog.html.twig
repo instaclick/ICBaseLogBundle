@@ -1,0 +1,12 @@
+<script type="text/javascript">
+window.onerror = function(message, file, line) {
+    var loggerUrl  = {{ targetPath }},
+        parameters = "?message=" + escape(message)
+    + "&amp;file="       + escape(file)
+    + "&amp;line="       + escape(line)
+    + "&amp;url="        + escape(document.location.href)
+    + "&amp;user_agent=" + escape(navigator.userAgent);
+
+    new Image().src = loggerUrl + parameters;
+}
+</script>
