@@ -91,7 +91,7 @@ class JavaScriptErrorLogExtension extends \Twig_Extension
         if ($this->kernelDebug || $averageKey <= $this->logRequest) {
             return $this->twig
                 ->render(
-                    "ICBaseLogBundle::javaScriptErrorLog.html.twig",
+                    "ICBaseLogBundle:Log:javaScriptErrorLog.html.twig",
                     array("targetPath" => $targetPath)
                 );
         }

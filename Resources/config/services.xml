@@ -7,6 +7,7 @@
         <import resource="services/consumer.xml"/>
         <import resource="services/extension.xml"/>
         <import resource="services/handler.xml"/>
+        <import resource="services/service.xml"/>
     </imports>
 
 </container>

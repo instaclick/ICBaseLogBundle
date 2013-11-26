@@ -5,7 +5,6 @@
 
     <parameters>
         <parameter key="ic_base_log.twig.extension.javascript_error_log_class">IC\Bundle\Base\LogBundle\Twig\JavaScriptErrorLogExtension</parameter>
-        <parameter key="ic_base_log.handler.amqp_handler_class">IC\Bundle\Base\LogBundle\Handler\RabbitMqHandler</parameter>
     </parameters>
 
 
