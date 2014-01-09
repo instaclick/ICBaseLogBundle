@@ -18,17 +18,8 @@ class Configuration implements ConfigurationInterface
     public function getConfigTreeBuilder()
     {
         $treeBuilder = new TreeBuilder();
-        $rootNode    = $treeBuilder->root('ic_base_log');
 
-        $rootNode
-            ->children()
-                ->integerNode('log_requests')
-                    ->isRequired()
-                    ->cannotBeEmpty()
-                    ->min(0)
-                    ->max(100)
-                ->end()
-            ->end();
+        $treeBuilder->root('ic_base_log');
 
         return $treeBuilder;
     }

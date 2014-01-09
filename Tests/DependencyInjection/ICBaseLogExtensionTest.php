@@ -24,9 +24,8 @@ class ICBaseLogExtensionTest extends ExtensionTestCase
      */
     public function testConfiguration()
     {
-        $loader        = new ICBaseLogExtension();
-        $configuration = array('log_requests' => 90);
+        $loader = new ICBaseLogExtension();
 
-        $this->load($loader, $configuration);
+        $this->load($loader, array());
     }
 }
