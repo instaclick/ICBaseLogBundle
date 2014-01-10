@@ -21,6 +21,16 @@ class Configuration implements ConfigurationInterface
 
         $treeBuilder->root('ic_base_log');
 
+        $rootNode
+            ->children()
+                ->integerNode('log_requests')
+                    ->isRequired()
+                    ->cannotBeEmpty()
+                    ->min(0)
+                    ->max(100)
+                ->end()
+            ->end();
+
         return $treeBuilder;
     }
 }

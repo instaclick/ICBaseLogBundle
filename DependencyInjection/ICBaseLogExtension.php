@@ -24,5 +24,9 @@ class ICBaseLogExtension extends Extension
 
         $loader = new Loader\XmlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
         $loader->load('services.xml');
-    }
+        $container->setParameter(
+            'ic_base_log.config.log_requests',
+            $config['log_requests']
+        ); 
+   }
 }
