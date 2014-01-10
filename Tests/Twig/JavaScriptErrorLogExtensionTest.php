@@ -201,4 +201,3 @@ class JavaScriptErrorLogExtensionTest extends TestCase
         return $twigMock;
     }
 }
-

@@ -124,4 +124,3 @@ class ConfigurationTest extends ConfigurationTestCase
         );
     }
 }
-

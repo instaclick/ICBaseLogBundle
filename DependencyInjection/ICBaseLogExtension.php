@@ -27,6 +27,6 @@ class ICBaseLogExtension extends Extension
         $container->setParameter(
             'ic_base_log.config.log_requests',
             $config['log_requests']
-        ); 
-   }
+        );
+    }
 }

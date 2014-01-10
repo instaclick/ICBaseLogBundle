@@ -43,4 +43,3 @@ class JavaScriptErrorLogService
         $this->logger->warning(strtr(self::MESSAGE, $parameterList));
     }
 }
-

@@ -45,4 +45,3 @@ class JavaScriptErrorController extends Controller
         return $response;
     }
 }
-

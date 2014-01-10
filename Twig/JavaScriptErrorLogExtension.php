@@ -73,7 +73,11 @@ class JavaScriptErrorLogExtension extends \Twig_Extension
     public function getFunctions()
     {
         return array(
-            new \Twig_SimpleFunction('javascript_error_log', array($this, 'renderLog'), array('is_safe' => array('html'))),
+            new \Twig_SimpleFunction(
+                'javascript_error_log',
+                array($this, 'renderLog'),
+                array('is_safe' => array('html'))
+            ),
         );
     }
 
@@ -107,4 +111,3 @@ class JavaScriptErrorLogExtension extends \Twig_Extension
         return 'ic_base_log.twig.extension.javascript_error_log_extension';
     }
 }
-
