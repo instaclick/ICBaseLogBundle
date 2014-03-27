@@ -7,7 +7,7 @@ use Symfony\Component\Config\Definition\ConfigurationInterface;
 
 /**
  * This is the class that validates and merges configuration from your app/config files
- * 
+ *
  * @author Fabio B. Silva <fabios@nationalfibre.net>
  */
 class Configuration implements ConfigurationInterface
@@ -27,6 +27,14 @@ class Configuration implements ConfigurationInterface
                     ->cannotBeEmpty()
                     ->min(0)
                     ->max(100)
+                ->end()
+                ->scalarNode('amqp_log_level')
+                    ->isRequired()
+                    ->cannotBeEmpty()
+                ->end()
+                ->scalarNode('amqp_exchange_name')
+                    ->isRequired()
+                    ->cannotBeEmpty()
                 ->end()
             ->end();
 

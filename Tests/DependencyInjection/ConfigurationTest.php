@@ -16,6 +16,7 @@ use IC\Bundle\Base\TestBundle\Test\DependencyInjection\ConfigurationTestCase;
  * @group DependencyInjection
  *
  * @author Kinn Coelho Julião <kinnj@nationalfibre.net>
+ * @author Paul Munson <pmunson@nationalfibre.net>
  */
 class ConfigurationTest extends ConfigurationTestCase
 {
@@ -31,6 +32,8 @@ class ConfigurationTest extends ConfigurationTestCase
         $configuration = $this->processConfiguration(new Configuration(), $config);
 
         $this->assertEquals($config['ic_base_log']['log_requests'], $configuration['log_requests']);
+        $this->assertEquals($config['ic_base_log']['amqp_log_level'], $configuration['amqp_log_level']);
+        $this->assertEquals($config['ic_base_log']['amqp_exchange_name'], $configuration['amqp_exchange_name']);
     }
 
     /**
@@ -57,42 +60,63 @@ class ConfigurationTest extends ConfigurationTestCase
             array(
                 array(
                     'ic_base_log' => array(
-                        'log_requests' => 5,
+                        'log_requests'       => 5,
+                        'amqp_log_level'     => 'critical',
+                        'amqp_exchange_name' => 'affiliate_log_dev',
                     ),
                 ),
             ),
             array(
                 array(
                     'ic_base_log' => array(
-                        'log_requests' => 6,
+                        'log_requests'       => 6,
+                        'amqp_log_level'     => 'critical',
+                        'amqp_exchange_name' => 'affiliate_log_dev',
                     ),
                 ),
             ),
             array(
                 array(
                     'ic_base_log' => array(
-                        'log_requests' => 10,
+                        'log_requests'       => 10,
+                        'amqp_log_level'     => 'critical',
+                        'amqp_exchange_name' => 'affiliate_log_dev',
                     ),
                 ),
             ),
             array(
                 array(
                     'ic_base_log' => array(
-                        'log_requests' => 100,
+                        'log_requests'       => 100,
+                        'amqp_log_level'     => 'critical',
+                        'amqp_exchange_name' => 'affiliate_log_dev',
                     ),
                 ),
             ),
             array(
                 array(
                     'ic_base_log' => array(
-                        'log_requests' => 1,
+                        'log_requests'       => 1,
+                        'amqp_log_level'     => 'critical',
+                        'amqp_exchange_name' => 'affiliate_log_dev',
                     ),
                 ),
             ),
             array(
                 array(
                     'ic_base_log' => array(
-                        'log_requests' => 90,
+                        'log_requests'       => 90,
+                        'amqp_log_level'     => 'critical',
+                        'amqp_exchange_name' => 'affiliate_log_dev',
+                    ),
+                ),
+            ),
+            array(
+                array(
+                    'ic_base_log' => array(
+                        'log_requests' => 95,
+                        'amqp_log_level'     => 'critical',
+                        'amqp_exchange_name' => 'affiliate_log_dev',
                     ),
                 ),
             ),
@@ -110,14 +134,18 @@ class ConfigurationTest extends ConfigurationTestCase
             array(
                 array(
                     'ic_base_log' => array(
-                        'log_requests' => 0,
+                        'log_requests'       => 0,
+                        'amqp_log_level'     => 'critical',
+                        'amqp_exchange_name' => 'affiliate_log_dev',
                     ),
                 ),
             ),
             array(
                 array(
                     'ic_base_log' => array(
-                        'log_requests' => 101,
+                        'log_requests'       => 101,
+                        'amqp_log_level'     => 'critical',
+                        'amqp_exchange_name' => 'affiliate_log_dev',
                     ),
                 ),
             ),

@@ -10,6 +10,8 @@
     <services>
         <service id="ic_base_log.handler.amqp_handler" class="%ic_base_log.handler.amqp_handler_class%">
             <argument type="service" id="ic_base_amqp.exchange.affiliate_log" />
+            <argument>%ic_base_log.handler.amqp_exchange_name%</argument>
+            <argument>%ic_base_log.handler.amqp_log_level%</argument>
         </service>
     </services>
 
