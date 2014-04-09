@@ -28,7 +28,7 @@ class JavaScriptErrorLogExtension extends \Twig_Extension
     /**
      * Set the log request parameter
      *
-     * @param int $logRequest
+     * @param integer $logRequest
      *
      * @throws \InvalidArgumentException
      */
@@ -44,7 +44,7 @@ class JavaScriptErrorLogExtension extends \Twig_Extension
     /**
      * Set the kernel debug parameter
      *
-     * @param bool $kernelDebug
+     * @param boolean $kernelDebug
      *
      * @throws \InvalidArgumentException
      */

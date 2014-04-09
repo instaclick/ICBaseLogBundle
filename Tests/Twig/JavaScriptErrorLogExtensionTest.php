@@ -84,7 +84,7 @@ class JavaScriptErrorLogExtensionTest extends TestCase
     /**
      * Test the kernelDebug method with valid data
      *
-     * @param bool $validData
+     * @param boolean $validData
      *
      * @dataProvider provideValidKernelDebugData
      */
