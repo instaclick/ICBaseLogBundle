@@ -7,15 +7,13 @@
         <parameter key="ic_base_log.service.javascript_error_service_class">IC\Bundle\Base\LogBundle\Service\JavaScriptErrorLogService</parameter>
     </parameters>
 
-
     <services>
 
-        <service id="ic_base_log.service.javascript_error_service"
-                 class="%ic_base_log.service.javascript_error_service_class%">
+        <service id="ic_base_log.service.javascript_error_service" class="%ic_base_log.service.javascript_error_service_class%">
+            <tag name="monolog.logger" channel="javascript_error" />
             <call method="setLogger">
                 <argument type="service" id="logger" />
             </call>
-            <tag name="monolog.logger" channel="javascript_error" />
         </service>
 
     </services>
