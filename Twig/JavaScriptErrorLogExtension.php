@@ -11,12 +11,12 @@ use Symfony\Bundle\TwigBundle\Debug\TimedTwigEngine;
 class JavaScriptErrorLogExtension extends \Twig_Extension
 {
     /**
-     * @var int
+     * @var integer
      */
     protected $logRequest;
 
     /**
-     * @var bool
+     * @var boolean
      */
     protected $kernelDebug;
 

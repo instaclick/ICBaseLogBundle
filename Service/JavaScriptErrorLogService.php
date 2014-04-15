@@ -19,7 +19,7 @@ class JavaScriptErrorLogService
     /**
      * The RabbitMQ producer.
      *
-     * @var \Psr\Log\LoggerInterface $logger
+     * @var \Psr\Log\LoggerInterface
      */
     private $logger;
 
@@ -34,7 +34,7 @@ class JavaScriptErrorLogService
     }
 
     /**
-     * write the log
+     * Write the log
      *
      * @param array $parameterList
      */
