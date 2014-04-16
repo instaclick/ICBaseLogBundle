@@ -28,14 +28,6 @@ class Configuration implements ConfigurationInterface
                     ->min(0)
                     ->max(100)
                 ->end()
-                ->scalarNode('amqp_log_level')
-                    ->isRequired()
-                    ->cannotBeEmpty()
-                ->end()
-                ->scalarNode('amqp_exchange_name')
-                    ->isRequired()
-                    ->cannotBeEmpty()
-                ->end()
             ->end();
 
         return $treeBuilder;

@@ -33,26 +33,6 @@ class ICBaseLogExtension extends Extension
         $loader = new Loader\XmlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
         $loader->load('services.xml');
 
-        $logLevelList = Logger::getLevels();
-        $logLevel     = strtoupper($config['amqp_log_level']);
-
-        if ( ! array_key_exists($logLevel, $logLevelList)) {
-            throw new InvalidConfigurationException(sprintf('Configured log level [%s] is not valid for AmqpHandler', $logLevel));
-        }
-
-        $container->setParameter(
-            'ic_base_log.config.log_requests',
-            $config['log_requests']
-        );
-
-        $container->setParameter(
-            'ic_base_log.handler.amqp_exchange_name',
-            $config['amqp_exchange_name']
-        );
-
-        $container->setParameter(
-            'ic_base_log.handler.amqp_log_level',
-            $logLevelList[$logLevel]
-        );
+        $container->setParameter('ic_base_log.config.log_requests', $config['log_requests']);
     }
 }
