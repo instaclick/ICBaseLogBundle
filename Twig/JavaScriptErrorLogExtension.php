@@ -5,7 +5,7 @@ use Symfony\Bundle\TwigBundle\Debug\TimedTwigEngine;
 
 /**
  * A twig extension to provide a JavaScript error log
- * 
+ *
  * @author Kinn Coelho Julião <kinnj@nationalfibre.net>
  */
 class JavaScriptErrorLogExtension extends \Twig_Extension
